@@ -188,13 +188,13 @@ def native_config(config, row, work, inputs):
             {
                 "Subscribe": [{"Book": [symbol]}],
                 "Exports": [v + "@TXF" for v in FEATURES.values()],
-                "MetadataExports": [{"Feature": "CurrentBook.0.book_mid_ticks.0@TXF", "Name": MID}],
+                "MetadataExports": [{"Feature": "CurrentBook.0.book_mid_price.0@TXF", "Name": MID}],
                 "Labelers": [
                     {
-                        "Type": "ForwardReturnLabeler",
+                        "Type": "ForwardReturnRateLabeler",
                         "Spec": {
                             "Dep": {"Book": ["CurrentBook.0@TXF"]},
-                            "Labels": [{"Y": "CurrentBook.0.book_mid_ticks.0@TXF", "Horizon": f"{h}s", "Name": "mid_return_ticks"} for h in [10, 60]],
+                            "Labels": [{"Y": "CurrentBook.0.book_mid_price.0@TXF", "Horizon": f"{h}s", "Name": "mid_return_bps", "Scale": 10000} for h in [10, 60]],
                         },
                     }
                 ],
@@ -629,14 +629,14 @@ def read_native_frame(work, raw, day, config):
             not len(expected) and all(summary[name] == 0 for name in ["sampled_rows", "emitted_rows", "pending_rows", "emitted_unresolved_rows", "unresolved_label_cells"]),
             "Missing native Parquet without completed zero-capture prefix",
         )
-        columns = [*KEYS, *FEATURES.values(), MID, "mid_return_ticks[10s]", "mid_return_ticks[60s]"]
+        columns = [*KEYS, *FEATURES.values(), MID, "mid_return_bps[10s]", "mid_return_bps[60s]"]
         frame = pd.DataFrame({name: pd.Series(dtype="int64" if name in KEYS else "float64") for name in columns})
     require(np.array_equal(frame.SampleTime, expected), "Native captured grid differs from exact published-clock prefix")
     return frame, summary
 
 
 def verify_native_frame(frame, raw, day, config):
-    expected_cols = {*KEYS, *FEATURES.values(), MID, "mid_return_ticks[10s]", "mid_return_ticks[60s]"}
+    expected_cols = {*KEYS, *FEATURES.values(), MID, "mid_return_bps[10s]", "mid_return_bps[60s]"}
     require(set(frame) == expected_cols and not frame[KEYS].duplicated().any(), "Unexpected native schema/keys")
     planned_grid = grid(day, config)
     expected_grid = native_capture_grid(raw, day, config)
@@ -656,10 +656,10 @@ def verify_native_frame(frame, raw, day, config):
         deadline = expected_grid + horizon * 1_000_000
         y1 = asof_values(updates, values, deadline, True)
         with np.errstate(invalid="ignore"):
-            expected = y1 - y0
+            expected = (y1 - y0) / y0 * 10000
         expected[np.isnan(y0) | np.isnan(y1) | np.isneginf(y0) | np.isneginf(y1)] = np.nan
         expected[deadline >= updates[-1] if len(updates) else np.ones(len(deadline), dtype=bool)] = np.nan
-        actual = frame[f"mid_return_ticks[{horizon}s]"].to_numpy(float)
+        actual = frame[f"mid_return_bps[{horizon}s]"].to_numpy(float)
         mismatch = ~np.isclose(actual, expected, rtol=0, atol=1e-10, equal_nan=True)
         result["labels"][str(horizon)] = {"known": int(np.isfinite(actual).sum()), "mismatches": int(mismatch.sum())}
         require(not mismatch.any(), f"Native {horizon}s label endpoint parity failed")
@@ -786,7 +786,7 @@ def origin_panel(row, config, output):
     panel["origin_status"] = status
     panel["native_captured"] = panel.SampleTime.isin(frame.SampleTime)
     renames = {column: name for name, column in FEATURES.items()}
-    renames.update({f"mid_return_ticks[{horizon}s]": f"native_label_{horizon}s" for horizon in [10, 60]})
+    renames.update({f"mid_return_bps[{horizon}s]": f"native_label_{horizon}s" for horizon in [10, 60]})
     captured = frame[[*KEYS, *renames]].rename(columns=renames).astype({name: "Int64" for name in KEYS[1:]})
     panel = panel.merge(captured, on="SampleTime", how="left", validate="one_to_one", sort=False)
     panel.loc[~panel.native_captured, "origin_status"] = "native_capture_unavailable"
@@ -995,7 +995,7 @@ def reporting_tables(analysis, origins, events):
                 "own_label_metric_origins": len(observed),
                 "pearson": float(observed.score.corr(observed[label])) if enough else np.nan,
                 "spearman": float(observed.score.rank().corr(observed[label].rank())) if enough else np.nan,
-                "mean_signed_native_return_ticks": float((np.sign(observed.score) * observed[label]).mean()) if len(observed) else np.nan,
+                "mean_signed_native_return_bps": float((np.sign(observed.score) * observed[label]).mean()) if len(observed) else np.nan,
                 "metric_population": "conditional on own-horizon known native label; never a decision/calibration mask",
             }
         )
