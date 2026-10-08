@@ -1,8 +1,0 @@
-# Alternative stock screen: daily liquidity gates, ranked by mean daily amplitude.
-extends: ../../workflows/profiles/baseline.yaml
-name: astra-stock-baseline-daily-liquidity
-universe_screen:
-  method: daily_liquidity
-  daily_liquidity:
-    minimum_average_volume_lots: 3000.0
-    maximum_last_price: 500.0
