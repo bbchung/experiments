@@ -1,0 +1,74 @@
+[
+  {
+    "threshold_quantile": 0.9,
+    "gate_type": "No Gate",
+    "total_signals": 5792,
+    "signals_per_day": 304.8,
+    "fill_rate": 46.4,
+    "mean_net_bps": -0.526,
+    "filled_net_bps": -1.1338,
+    "win_rate_pct": 18.5,
+    "cum_pnl_bps": -3046.57,
+    "daily_sharpe": -24.49
+  },
+  {
+    "threshold_quantile": 0.95,
+    "gate_type": "No Gate",
+    "total_signals": 2896,
+    "signals_per_day": 152.4,
+    "fill_rate": 47.3,
+    "mean_net_bps": -0.5028,
+    "filled_net_bps": -1.0636,
+    "win_rate_pct": 19.0,
+    "cum_pnl_bps": -1456.07,
+    "daily_sharpe": -18.35
+  },
+  {
+    "threshold_quantile": 0.98,
+    "gate_type": "No Gate",
+    "total_signals": 1159,
+    "signals_per_day": 61.0,
+    "fill_rate": 53.1,
+    "mean_net_bps": -0.568,
+    "filled_net_bps": -1.0704,
+    "win_rate_pct": 21.8,
+    "cum_pnl_bps": -658.3,
+    "daily_sharpe": -11.74
+  },
+  {
+    "threshold_quantile": 0.99,
+    "gate_type": "No Gate",
+    "total_signals": 580,
+    "signals_per_day": 30.5,
+    "fill_rate": 56.9,
+    "mean_net_bps": -0.2829,
+    "filled_net_bps": -0.4973,
+    "win_rate_pct": 25.0,
+    "cum_pnl_bps": -164.09,
+    "daily_sharpe": -4.53
+  },
+  {
+    "threshold_quantile": 0.995,
+    "gate_type": "No Gate",
+    "total_signals": 290,
+    "signals_per_day": 15.3,
+    "fill_rate": 59.7,
+    "mean_net_bps": -0.4123,
+    "filled_net_bps": -0.6911,
+    "win_rate_pct": 25.2,
+    "cum_pnl_bps": -119.56,
+    "daily_sharpe": -5.2
+  },
+  {
+    "threshold_quantile": 0.998,
+    "gate_type": "No Gate",
+    "total_signals": 116,
+    "signals_per_day": 6.1,
+    "fill_rate": 63.8,
+    "mean_net_bps": -0.5299,
+    "filled_net_bps": -0.8306,
+    "win_rate_pct": 26.7,
+    "cum_pnl_bps": -61.46,
+    "daily_sharpe": -3.5
+  }
+]

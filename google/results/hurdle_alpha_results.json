@@ -1,0 +1,96 @@
+{
+  "buy": {
+    "train_auc": 0.6670509123283259,
+    "test_auc": 0.6021078808636032,
+    "rank_ic_with_net_pnl": 0.032790017958668934,
+    "tiers": {
+      "Top_10%": {
+        "count": 5792,
+        "fill_rate": 72.1,
+        "mean_mid_move_bps": 0.2683,
+        "mean_ioc_net_bps": -0.7751,
+        "filled_ioc_net_bps": -1.0753,
+        "win_rate_pct": 31.8
+      },
+      "Top_5%": {
+        "count": 2896,
+        "fill_rate": 71.5,
+        "mean_mid_move_bps": 0.5808,
+        "mean_ioc_net_bps": -0.4719,
+        "filled_ioc_net_bps": -0.6599,
+        "win_rate_pct": 32.9
+      },
+      "Top_2%": {
+        "count": 1159,
+        "fill_rate": 71.3,
+        "mean_mid_move_bps": 0.9482,
+        "mean_ioc_net_bps": -0.2313,
+        "filled_ioc_net_bps": -0.3246,
+        "win_rate_pct": 33.3
+      },
+      "Top_1%": {
+        "count": 580,
+        "fill_rate": 72.8,
+        "mean_mid_move_bps": 1.5578,
+        "mean_ioc_net_bps": 0.415,
+        "filled_ioc_net_bps": 0.5703,
+        "win_rate_pct": 35.0
+      },
+      "Top_0.5%": {
+        "count": 290,
+        "fill_rate": 70.0,
+        "mean_mid_move_bps": 3.0496,
+        "mean_ioc_net_bps": 1.7399,
+        "filled_ioc_net_bps": 2.4855,
+        "win_rate_pct": 41.4
+      }
+    }
+  },
+  "sell": {
+    "train_auc": 0.709654584623732,
+    "test_auc": 0.5948790545946944,
+    "rank_ic_with_net_pnl": 0.030261713727322784,
+    "tiers": {
+      "Top_10%": {
+        "count": 5792,
+        "fill_rate": 73.4,
+        "mean_mid_move_bps": -0.1036,
+        "mean_ioc_net_bps": -1.1955,
+        "filled_ioc_net_bps": -1.6282,
+        "win_rate_pct": 32.9
+      },
+      "Top_5%": {
+        "count": 2896,
+        "fill_rate": 72.2,
+        "mean_mid_move_bps": -0.1338,
+        "mean_ioc_net_bps": -1.3153,
+        "filled_ioc_net_bps": -1.8207,
+        "win_rate_pct": 32.5
+      },
+      "Top_2%": {
+        "count": 1159,
+        "fill_rate": 72.2,
+        "mean_mid_move_bps": -0.5536,
+        "mean_ioc_net_bps": -1.6405,
+        "filled_ioc_net_bps": -2.2716,
+        "win_rate_pct": 33.3
+      },
+      "Top_1%": {
+        "count": 580,
+        "fill_rate": 73.3,
+        "mean_mid_move_bps": -1.4173,
+        "mean_ioc_net_bps": -2.635,
+        "filled_ioc_net_bps": -3.5961,
+        "win_rate_pct": 31.6
+      },
+      "Top_0.5%": {
+        "count": 290,
+        "fill_rate": 75.5,
+        "mean_mid_move_bps": -2.1112,
+        "mean_ioc_net_bps": -3.2587,
+        "filled_ioc_net_bps": -4.3151,
+        "win_rate_pct": 32.1
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "arm": "Full 2169 Features",
+    "model_type": "Regressor (RMSE)",
+    "features_count": 2169,
+    "side": "buy",
+    "rank_ic": 0.0162,
+    "top_10_pct_payoff_bps": -1.2983,
+    "overall_mean_bps": -1.1013
+  },
+  {
+    "arm": "Full 2169 Features",
+    "model_type": "Regressor (RMSE)",
+    "features_count": 2169,
+    "side": "sell",
+    "rank_ic": 0.0009,
+    "top_10_pct_payoff_bps": -0.8576,
+    "overall_mean_bps": -1.0389
+  },
+  {
+    "arm": "Top-30 Features",
+    "model_type": "Regressor (RMSE)",
+    "features_count": 30,
+    "side": "buy",
+    "rank_ic": 0.074,
+    "top_10_pct_payoff_bps": -0.526,
+    "overall_mean_bps": -1.1013
+  },
+  {
+    "arm": "Top-30 Features",
+    "model_type": "Regressor (RMSE)",
+    "features_count": 30,
+    "side": "sell",
+    "rank_ic": 0.0561,
+    "top_10_pct_payoff_bps": -0.4073,
+    "overall_mean_bps": -1.0389
+  },
+  {
+    "arm": "Top-10 Curated Micro",
+    "model_type": "Regressor (RMSE)",
+    "features_count": 10,
+    "side": "buy",
+    "rank_ic": 0.0246,
+    "top_10_pct_payoff_bps": -0.697,
+    "overall_mean_bps": -1.1013
+  },
+  {
+    "arm": "Top-10 Curated Micro",
+    "model_type": "Regressor (RMSE)",
+    "features_count": 10,
+    "side": "sell",
+    "rank_ic": 0.0239,
+    "top_10_pct_payoff_bps": -0.9506,
+    "overall_mean_bps": -1.0389
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "strategy": "Top 1% (P99)",
+    "threshold": 0.4451,
+    "total_trades": 580,
+    "trades_per_day": 30.5,
+    "fill_rate_pct": 72.8,
+    "mean_net_bps_per_signal": 0.415,
+    "filled_net_bps_per_trade": 0.5703,
+    "win_rate_pct": 35.0,
+    "profit_factor": 1.14,
+    "total_cum_pnl_bps": 240.68,
+    "daily_sharpe": 3.06,
+    "max_drawdown_bps": -149.9,
+    "profitable_days_pct": 47.4
+  },
+  {
+    "strategy": "Top 0.5% (P99.5)",
+    "threshold": 0.4674,
+    "total_trades": 290,
+    "trades_per_day": 15.3,
+    "fill_rate_pct": 70.0,
+    "mean_net_bps_per_signal": 1.7399,
+    "filled_net_bps_per_trade": 2.4855,
+    "win_rate_pct": 41.4,
+    "profit_factor": 1.77,
+    "total_cum_pnl_bps": 504.57,
+    "daily_sharpe": 6.96,
+    "max_drawdown_bps": -91.97,
+    "profitable_days_pct": 52.6
+  },
+  {
+    "strategy": "Top 0.3% (P99.7)",
+    "threshold": 0.4827,
+    "total_trades": 174,
+    "trades_per_day": 9.2,
+    "fill_rate_pct": 69.0,
+    "mean_net_bps_per_signal": 2.2589,
+    "filled_net_bps_per_trade": 3.2754,
+    "win_rate_pct": 42.0,
+    "profit_factor": 1.93,
+    "total_cum_pnl_bps": 393.04,
+    "daily_sharpe": 7.03,
+    "max_drawdown_bps": -88.51,
+    "profitable_days_pct": 57.9
+  },
+  {
+    "strategy": "Top 0.2% (P99.8)",
+    "threshold": 0.4988,
+    "total_trades": 116,
+    "trades_per_day": 6.1,
+    "fill_rate_pct": 68.1,
+    "mean_net_bps_per_signal": 2.3882,
+    "filled_net_bps_per_trade": 3.5068,
+    "win_rate_pct": 44.0,
+    "profit_factor": 2.01,
+    "total_cum_pnl_bps": 277.04,
+    "daily_sharpe": 9.23,
+    "max_drawdown_bps": -27.14,
+    "profitable_days_pct": 52.6
+  }
+]

@@ -1,0 +1,9 @@
+train_auc,test_auc,overfit_delta,pooled_rank_ic,mean_daily_rank_ic,positive_ic_days_pct,top_decile_payoff_bps,overall_mean_payoff_bps,arm,features_count,side,fit_time_seconds
+0.6996,0.6039,0.0957,-0.0589,-0.0534,0.0,-1.262,-1.1013,Arm 1: Full 2169 Features,2169,buy,46.88
+0.6975,0.6081,0.0894,-0.0398,-0.0599,10.5,-1.3008,-1.0389,Arm 1: Full 2169 Features,2169,sell,45.33
+0.6356,0.5983,0.0373,-0.0718,-0.0686,0.0,-1.3231,-1.1013,Arm 2: Top-30 Train IC,30,buy,1.55
+0.6359,0.6006,0.0353,-0.0622,-0.0679,0.0,-1.4067,-1.0389,Arm 2: Top-30 Train IC,30,sell,1.59
+0.61,0.5665,0.0435,-0.007,-0.0037,36.8,-1.0241,-1.1013,Arm 3: Top-10 Curated Micro,10,buy,1.5
+0.6142,0.5603,0.0539,-0.0138,-0.0327,15.8,-1.3774,-1.0389,Arm 3: Top-10 Curated Micro,10,sell,1.52
+0.5301,0.5301,0.0,-0.0291,-0.0291,5.3,-1.1116,-1.1013,Arm 4: Single L1 Imbalance,1,buy,1.56
+0.5324,0.5314,0.001,-0.0252,-0.023,10.5,-1.0713,-1.0389,Arm 4: Single L1 Imbalance,1,sell,1.46

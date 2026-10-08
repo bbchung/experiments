@@ -1,0 +1,5 @@
+strategy,threshold,total_trades,trades_per_day,fill_rate_pct,mean_net_bps_per_signal,filled_net_bps_per_trade,win_rate_pct,profit_factor,total_cum_pnl_bps,daily_sharpe,max_drawdown_bps,profitable_days_pct
+Top 1% (P99),0.4451,580,30.5,72.8,0.415,0.5703,35.0,1.14,240.68,3.06,-149.9,47.4
+Top 0.5% (P99.5),0.4674,290,15.3,70.0,1.7399,2.4855,41.4,1.77,504.57,6.96,-91.97,52.6
+Top 0.3% (P99.7),0.4827,174,9.2,69.0,2.2589,3.2754,42.0,1.93,393.04,7.03,-88.51,57.9
+Top 0.2% (P99.8),0.4988,116,6.1,68.1,2.3882,3.5068,44.0,2.01,277.04,9.23,-27.14,52.6

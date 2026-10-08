@@ -1,0 +1,132 @@
+{
+  "buy": {
+    "train_ic": 0.1582595861981378,
+    "test_ic": 0.07397391844738739,
+    "mean_daily_ic": 0.07299967651175271,
+    "pct_positive_days": 100.0,
+    "base_payoff_bps": -1.1012824773788452,
+    "top_10pct_payoff_bps": -0.5259953141212463,
+    "top_5pct_payoff_bps": -0.5027850866317749,
+    "top_2pct_payoff_bps": -0.5679930448532104,
+    "top_1pct_payoff_bps": -0.282920777797699,
+    "decile_payoffs": {
+      "0": -1.3808947801589966,
+      "1": -1.438101053237915,
+      "2": -1.3504387140274048,
+      "3": -1.2855749130249023,
+      "4": -1.2838013172149658,
+      "5": -1.2196110486984253,
+      "6": -0.9208643436431885,
+      "7": -0.8562735915184021,
+      "8": -0.7512884736061096,
+      "9": -0.5259953737258911
+    },
+    "top_features": [
+      [
+        "BookWidthExpansion.0.book_width_expansion.0",
+        7.141783672867785
+      ],
+      [
+        "OfiAcceleration.0.ofi_acceleration.0",
+        6.624453702883828
+      ],
+      [
+        "SignedPathState.0.cause_direction.0",
+        6.069006269355429
+      ],
+      [
+        "RawDirectionPath.0.bid_touch_move_ticks.0",
+        5.560065510030661
+      ],
+      [
+        "SpreadState.0.rel_spread.1",
+        4.718261571921768
+      ],
+      [
+        "TouchDepthRatio.0.depth_ratio.0",
+        4.4329316254270985
+      ],
+      [
+        "PriceAccelerationMomentum.0.price_acceleration_momentum.0",
+        4.031397484213175
+      ],
+      [
+        "RawDirectionPath.0.bid_touch_move_ticks.1",
+        3.966073864894207
+      ],
+      [
+        "BookResiliencyState.0.bid_supply_residual.0",
+        3.7526449721248576
+      ],
+      [
+        "SpreadState.0.rel_spread.0",
+        3.6223574718287446
+      ]
+    ]
+  },
+  "sell": {
+    "train_ic": 0.1649766295087539,
+    "test_ic": 0.05135203331752026,
+    "mean_daily_ic": 0.04894436406155262,
+    "pct_positive_days": 89.47368421052632,
+    "base_payoff_bps": -1.038942575454712,
+    "top_10pct_payoff_bps": -0.8112837076187134,
+    "top_5pct_payoff_bps": -1.0150306224822998,
+    "top_2pct_payoff_bps": -1.4953535795211792,
+    "top_1pct_payoff_bps": -1.8051925897598267,
+    "decile_payoffs": {
+      "0": -1.2235231399536133,
+      "1": -1.1973768472671509,
+      "2": -1.1757293939590454,
+      "3": -1.2284754514694214,
+      "4": -1.0219266414642334,
+      "5": -1.0895673036575317,
+      "6": -1.0586588382720947,
+      "7": -0.8975091576576233,
+      "8": -0.6853861212730408,
+      "9": -0.8112837672233582
+    },
+    "top_features": [
+      [
+        "LiquidityEventPressure.0.depletion_pressure_ask5.0",
+        7.106582818776597
+      ],
+      [
+        "TradeLiquidityRatio.0.trade_act.4",
+        6.207523206967052
+      ],
+      [
+        "RawDirectionPath.0.ask_touch_move_ticks.1",
+        6.015981592320362
+      ],
+      [
+        "TradeLiquidityRatio.0.trade_act.6",
+        5.741936940579121
+      ],
+      [
+        "OfiAcceleration.0.ofi_acceleration.0",
+        5.476536011629096
+      ],
+      [
+        "TradeLiquidityRatio.0.trade_act.2",
+        5.055400714920426
+      ],
+      [
+        "LiquidityEventPressure.0.depletion_pressure_ask3.0",
+        4.469647685093095
+      ],
+      [
+        "BookResiliencyState.0.ask_supply_residual.0",
+        4.4447324624159235
+      ],
+      [
+        "LiquidityEventPressure.0.depletion_pressure_ask4.0",
+        3.5035657167915493
+      ],
+      [
+        "QueueDepletionPressure.0.deplete_pressure_touch_activity2.0",
+        3.4089690669370567
+      ]
+    ]
+  }
+}

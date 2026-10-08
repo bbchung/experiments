@@ -1,0 +1,7 @@
+arm,model_type,features_count,side,rank_ic,top_10_pct_payoff_bps,overall_mean_bps
+Full 2169 Features,Regressor (RMSE),2169,buy,0.0162,-1.2983,-1.1013
+Full 2169 Features,Regressor (RMSE),2169,sell,0.0009,-0.8576,-1.0389
+Top-30 Features,Regressor (RMSE),30,buy,0.074,-0.526,-1.1013
+Top-30 Features,Regressor (RMSE),30,sell,0.0561,-0.4073,-1.0389
+Top-10 Curated Micro,Regressor (RMSE),10,buy,0.0246,-0.697,-1.1013
+Top-10 Curated Micro,Regressor (RMSE),10,sell,0.0239,-0.9506,-1.0389

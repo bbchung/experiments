@@ -1,0 +1,10 @@
+{
+  "buy_signals": 245,
+  "buy_mean_net_bps": 0.7383698747729618,
+  "buy_total_pnl": 180.90061931937564,
+  "sell_signals": 229,
+  "sell_mean_net_bps": 0.4121266657515346,
+  "sell_total_pnl": 94.37700645710143,
+  "total_portfolio_pnl": 275.2776257764771,
+  "combined_sharpe": 4.172005149051034
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "stride_label": "Stride 1 (5s grid - 83% overlap)",
+    "stride": 1,
+    "train_samples": 105580,
+    "fit_time": 1.4,
+    "train_ic": 0.1583,
+    "test_ic": 0.074,
+    "overfit_delta": 0.0843,
+    "mean_daily_ic": 0.073,
+    "pct_positive_days": 100.0,
+    "top10_payoff_bps": -0.526
+  },
+  {
+    "stride_label": "Stride 2 (10s grid - 66% overlap)",
+    "stride": 2,
+    "train_samples": 52790,
+    "fit_time": 1.13,
+    "train_ic": 0.2065,
+    "test_ic": 0.0657,
+    "overfit_delta": 0.1408,
+    "mean_daily_ic": 0.0652,
+    "pct_positive_days": 100.0,
+    "top10_payoff_bps": -0.6214
+  },
+  {
+    "stride_label": "Stride 6 (30s grid - Non-overlapping)",
+    "stride": 6,
+    "train_samples": 17597,
+    "fit_time": 1.11,
+    "train_ic": 0.3232,
+    "test_ic": 0.0573,
+    "overfit_delta": 0.266,
+    "mean_daily_ic": 0.0578,
+    "pct_positive_days": 100.0,
+    "top10_payoff_bps": -0.7143
+  }
+]
